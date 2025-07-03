@@ -24,7 +24,7 @@ Aplikasi ini memprediksi jumlah kunjungan wisatawan mancanegara ke Indonesia per
 # --- Load Dataset ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("jumlah_kunjungan_wisman_2018_2025.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/username/repo/main/jumlah_kunjungan_wisman_2018_2025.csv")
     df['Tanggal'] = pd.to_datetime(df['Tanggal'])
     df.set_index('Tanggal', inplace=True)
     return df
